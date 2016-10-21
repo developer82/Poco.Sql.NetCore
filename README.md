@@ -1,6 +1,8 @@
 # Poco.Sql.NetCore
 ##### Auto generate SQL statements from .NET objects
 
+Poco.Sql.NetCore is a convertion of the original Poco.Sql project (https://github.com/developer82/Poco.Sql) to .NET Core.
+
 ## Quick Start
 
 Include the Poco.Sql extentions method namespace
