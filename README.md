@@ -1,4 +1,4 @@
-# Poco.Sql
+# Poco.Sql.NetCore
 ##### Auto generate SQL statements from .NET objects
 
 ## Quick Start
@@ -6,7 +6,7 @@
 Include the Poco.Sql extentions method namespace
 
 ```
-using Poco.Sql.Extensions;
+using Poco.Sql.NetCore.Extensions;
 ```
 
 Generate SQL statements from ANY object
@@ -18,7 +18,7 @@ myObject.PocoSql().Update().ToString();
 myObject.PocoSql().Delete().ToString();
 ```
 
-[Read the Quick Start guide](https://github.com/developer82/Poco.Sql/wiki/Quick-Start)
+[Read the Quick Start guide](https://github.com/developer82/Poco.Sql.NetCore/wiki/Quick-Start)
 
 **It's that simple!**
 
@@ -38,15 +38,15 @@ Configuration.Initialize(config =>
   config.AddMap(new EntityMap());
 });
 ```
-[Read more about Poco.Sql configuration](https://github.com/developer82/Poco.Sql/wiki/Configuration)
+[Read more about Poco.Sql.NetCore configuration](https://github.com/developer82/Poco.Sql.NetCore/wiki/Configuration)
 
 ## Object Mapping
 
-Poco.Sql works out-of-the-box on any .NET class and without the need to configure or map anything. However, there might be cases where we would like to apply mapping on objects - map relationships between objects, map object properties to database fields, ignore properties, set custom table name for object, define stored procedures, and more...
+Poco.Sql.NetCore works out-of-the-box on any .NET class and without the need to configure or map anything. However, there might be cases where we would like to apply mapping on objects - map relationships between objects, map object properties to database fields, ignore properties, set custom table name for object, define stored procedures, and more...
 
-To allow such mapping, Poco.Sql has a mapping object that helps you define mappings between your objects and the database.
+To allow such mapping, Poco.Sql.NetCore has a mapping object that helps you define mappings between your objects and the database.
 
-To create a mapping object, create a new class that inherits from `Poco.Sql.PocoSqlMapping<T>`
+To create a mapping object, create a new class that inherits from `Poco.Sql.NetCore.PocoSqlMapping<T>`
 
 ```
 public class UserMap : PocoSqlMapping<User>
@@ -58,22 +58,21 @@ public class UserMap : PocoSqlMapping<User>
 }
 ```
 
-[Read more about Poco.Sql mappings](https://github.com/developer82/Poco.Sql/wiki/Object-Mapping)
+[Read more about Poco.Sql.NetCore mappings](https://github.com/developer82/Poco.Sql.NetCore/wiki/Object-Mapping)
 
 ## Values Object Creator
 
-To save the time and lines of code in writing these objects, Poco.Sql has an helper class that knows how to create an object that's combined of your domain objects, and is specific to SQL statement.
+To save the time and lines of code in writing these objects, Poco.Sql.NetCore has an helper class that knows how to create an object that's combined of your domain objects, and is specific to SQL statement.
 
 ```
 var sql = "insert into Users(FirstName, LastName, DateOfBirth, LuckyNumber, IsRegistered) values(@FirstName, @LastName, @DateOfBirth, @LuckyNumber, @IsRegistered)";
 var data = ValuesObject.Create(sql, myUserObject /* , ... */);
 ```
 
-[Read more about Poco.Sql Values Object Creator](https://github.com/developer82/Poco.Sql/wiki/Values-Object-Creator)
+[Read more about Poco.Sql.NetCore Values Object Creator](https://github.com/developer82/Poco.Sql.NetCore/wiki/Values-Object-Creator)
 
 ## Further Reading
 
-You can have more information about this project (and other stuff I do) on my blog at http://developer82.webe.co.il
 I'm also on twitter! follow me [@supervill_dev82](https://twitter.com/supervill_dev82)
 
 ## License
