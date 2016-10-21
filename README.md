@@ -1,3 +1,5 @@
+![Poco.Sql.NetCore](https://github.com/developer82/Poco.Sql.NetCore/blob/master/Logo.png)
+
 # Poco.Sql.NetCore
 ##### Auto generate SQL statements from .NET objects
 
