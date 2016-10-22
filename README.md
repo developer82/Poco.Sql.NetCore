@@ -5,6 +5,12 @@
 
 Poco.Sql.NetCore is a convertion of the original Poco.Sql project (https://github.com/developer82/Poco.Sql) to .NET Core.
 
+## Installation
+
+Poco.Sql.NetCore is avilable via NuGet (https://www.nuget.org/packages/Poco.Sql.NetCore/1.0.0)
+
+`Install-Package Poco.Sql.NetCore`
+
 ## Quick Start
 
 Include the Poco.Sql extentions method namespace
