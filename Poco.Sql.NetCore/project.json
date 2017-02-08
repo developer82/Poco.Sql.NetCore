@@ -1,5 +1,19 @@
 {
   "version": "1.0.0-*",
+  "title": "Poco.Sql.NetCore",
+  "description": "Lightweight .NET Core library for generating SQL statements from plain objects with advanced features and mapping support",
+  "authors": [ "Ophir Oren" ],
+  "copyright": "Copyright (c) 2016 Ophir Oren",
+  "packOptions": {
+    "owners": [ "Ophir Oren" ],
+    "projectUrl": "https://github.com/developer82/Poco.Sql.NetCore",
+    "tags": [ "ORM", "DAL", "ado.net", "data", "recordset", "sql", "query", "generator", "batch", "database", "micro-orm", "data-mapper", "poco", "schema-less", "netstandard", "netcore", "net45" ],
+    "licenseUrl": "https://github.com/developer82/Poco.Sql.NetCore/blob/master/LICENSE",
+    "iconUrl": "https://github.com/developer82/Poco.Sql.NetCore/blob/master/Logo.png"
+  },
+  "buildOptions": {
+    "xmlDoc": true
+  },
 
   "dependencies": {
     "Humanizer.xproj": "2.1.0",
@@ -13,5 +27,11 @@
     "netstandard1.6": {
       "imports": "dnxcore50"
     }
+  },
+
+  "scripts": {
+    "postcompile": [
+      "dotnet pack --no-build --configuration %compile:Configuration%"
+    ]
   }
 }
