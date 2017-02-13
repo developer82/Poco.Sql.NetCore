@@ -48,14 +48,7 @@ namespace Poco.Sql.NetCore
                         if (propertyInfo.PropertyType == typeof (DateTime) && (DateTime) val == DateTime.MinValue)
                             val = (DateTime) System.Data.SqlTypes.SqlDateTime.MinValue;
 
-                        if (val == null)
-                        {
-                            objDic.Add(propertyInfo.Name, DBNull.Value);
-                        }
-                        else
-                        {
-                            objDic.Add(propertyInfo.Name, val);
-                        }
+                       objDic.Add(propertyInfo.Name, val);
                     }
                 }
             }
