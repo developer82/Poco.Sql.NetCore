@@ -8,5 +8,17 @@ namespace Poco.Sql.NetCore
         {
             return new SqlBuilder(obj);
         }
+
+        public static SqlBuilder PocoSql<T>()
+        {
+            var obj = (object)Activator.CreateInstance<T>();
+            return new SqlBuilder(obj);
+        }
+
+        public static SqlBuilder PocoSql<T>(this Object obj)
+        {
+            var pocoObj = (object)Activator.CreateInstance<T>();
+            return new SqlBuilder(pocoObj);
+        }
     }
 }

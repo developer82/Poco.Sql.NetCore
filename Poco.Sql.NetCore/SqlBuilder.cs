@@ -176,6 +176,12 @@ namespace Poco.Sql.NetCore
             return this;
         }
 
+        public SqlBuilder NoSemicolon()
+        {
+            currentTask.EndWithSemicolon = false;
+            return this;
+        }
+
         //private SqlBuilder buildSqlStatement(object obj, SqlBuilderTask.QueryTypeEnum queryType, string tableName, bool? fullGraph, bool? pluralizeTableNames, IPocoSqlMapping map)
         private SqlBuilder buildSqlStatement(object obj, SqlBuilderTask task)
         {

@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Lightweight .NET Core library for generating SQL statements from plain objects with advanced features and mapping support</Description>
+    <Copyright>Copyright (c) 2016 Ophir Oren</Copyright>
+    <AssemblyTitle>Poco.Sql.NetCore</AssemblyTitle>
+    <Authors>Ophir Oren</Authors>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>Poco.Sql.NetCore</AssemblyName>
+    <PackageId>Poco.Sql.NetCore</PackageId>
+    <PackageTags>ORM;DAL;ado.net;data;recordset;sql;query;generator;batch;database;micro-orm;data-mapper;poco;schema-less;netstandard;netcore;net45</PackageTags>
+    <PackageIconUrl>https://github.com/developer82/Poco.Sql.NetCore/blob/master/Logo.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/developer82/Poco.Sql.NetCore</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/developer82/Poco.Sql.NetCore/blob/master/LICENSE</PackageLicenseUrl>
+    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
+    <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Humanizer.xproj" Version="2.1.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.3.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.3.1" />
+    <PackageReference Include="System.Dynamic.Runtime" Version="4.3.0" />
+  </ItemGroup>
+
+  <Target Name="PostcompileScript" AfterTargets="Build">
+    <Exec Command="dotnet pack --no-build --configuration $(Configuration)" />
+  </Target>
+
+</Project>
