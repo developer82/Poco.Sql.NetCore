@@ -91,7 +91,7 @@ I'm also on twitter! follow me [@supervill_dev82](https://twitter.com/supervill_
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Ophir Oren
+Copyright (c) 2014-2018 Ophir Oren
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
