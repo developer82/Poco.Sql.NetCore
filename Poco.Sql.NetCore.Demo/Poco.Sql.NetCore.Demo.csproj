@@ -12,6 +12,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="UnitTestRunner" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Poco.Sql.NetCore.UnitTests\Poco.Sql.NetCore.UnitTests.csproj" />
     <ProjectReference Include="..\Poco.Sql.NetCore\Poco.Sql.NetCore.csproj" />
     <ProjectReference Include="..\Poco.Sql.NetCore.Test.Models\Poco.Sql.NetCore.Test.Models.csproj" />
   </ItemGroup>
